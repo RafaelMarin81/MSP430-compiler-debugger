@@ -56,14 +56,23 @@ Include the following text to ~/.bashrc
 =======================================
 
 function msp430-472 () {
+
     export PATH=/opt/mspgcc-4.7.2/bin:$PATH  # Experimental 20 bits.
+
     MSP430_GCC_VERSION=`msp430-gcc -dumpversion`
+
     if [ "$MSP430_GCC_VERSION" == "4.7.2" ]; then
+
         echo "Compiler msp430-gcc 4.7.2 for MSP430 Experimental 20bits"
+
     else
+
         echo "ERROR: Compiler msp430-gcc $MSP430_GCC_VERSION != 4.7.2 for MSP430 Experimental 20bits"
+
     fi
+
 }
+
 
 msp430-472
 
@@ -71,10 +80,13 @@ Usage
 =====
 
 make                # Compile in Contiki
+
 make app_pwm.upload0  TARGET=odin5438A    # Program ttyUSB0
+
 make app_pwm.upload1  TARGET=odin5438A    # Program ttyUSB1
 
 mspdebug -d /dev/ttyUSB0 debug      # Logging ttyUSB0
+
 mspdebug -d /dev/ttyUSB1 debug      # Logging ttyUSB1
 
 compilation-5438a.sh msp430x54x_pwm.c   # Compile and Program in ttyUSB0 using example-msp430f54xxA

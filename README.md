@@ -29,8 +29,8 @@ MSPDebug is a free debugger for use with MSP430 MCUs. It supports FET430UIF, eZ4
   * Simulation mode allows execution of MSP430 code without hardware.
   * Cross-platform: compiles on Linux, *BSD, OS/X and Windows.
 
-Installation
-============
+Installation in Ubuntu/Linux
+============================
 
 To install the compiler for 64bits:
 
@@ -47,6 +47,10 @@ $ cp mspdebug-64bits/mspdebug /usr/local/bin/
 To install the debugger for 32 bits operation system.
 
 $ cp mspdebug-32bits/mspdebug /usr/local/bin/ 
+
+To support automatical permissions for ttyUSBx ports
+
+$ sudo cp 99-usb-serial.rules  /etc/udev/rules.d/99-usb-serial.rules
 
 Include the following text to ~/.bashrc
 =======================================

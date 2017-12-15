@@ -54,6 +54,7 @@ $ sudo cp 99-usb-serial.rules  /etc/udev/rules.d/99-usb-serial.rules
 
 Include the following text to ~/.bashrc
 =======================================
+{
 
 function msp430-472 () {
     export PATH=/opt/mspgcc-4.7.2/bin:$PATH  # Experimental 20 bits.
@@ -65,9 +66,9 @@ function msp430-472 () {
     fi
 }
 
-
 msp430-472
 
+}
 
 Usage 
 =====
